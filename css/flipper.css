@@ -100,7 +100,7 @@ div.flip-out {
 
 
 .well {
-        height: 356px;
+        height: 300px;
      position: relative;
 
 }
@@ -120,4 +120,9 @@ div.flip-out {
     right: 5px;
     bottom: 0;
     position: absolute;
+}
+#title {
+    color: white;
+    padding-left: 15px;
+    padding-right: 3px;
 }

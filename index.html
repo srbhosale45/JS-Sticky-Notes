@@ -18,32 +18,53 @@
 </head>
 
 <body>
-
     <div class="navbar navbar-inverse">
         <div class="navbar-header">
+<h1 id="title"> Sticky Notes </h1>
+            
+            <input type="hidden" id="current_page" value="home">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <a class="navbar-brand" href="javascript:void(0)">Sticky Notes&nbsp;&nbsp;&nbsp;<span class="icon-material-keyboard-arrow-right"></span>&nbsp;&nbsp;&nbsp;Keep</a>
+            <a class="navbar-brand" href="javascript:void(0)" onclick="return toggle_trash(false);">Sticky Notes&nbsp;&nbsp;&nbsp;</a>
+            <a class="navbar-brand withripple" href="javascript:void(0)" onclick="toggle_trash(true);">&nbsp;&nbsp;&nbsp;Trash<div class="ripple-wrapper"></div></a>
         </div>
     </div>
 
     <div class="container">
-        <div class="col-xs-12 col-md-4 full-card" id="blankcard" hidden="hidden">
+        <div class="col-xs-12 col-md-3 full-card" id="blankcard" hidden="hidden">
             <div class="flip-card active-card">
                 <div class="card alert-success">
                     <h6 contenteditable class="title">Untitled</h6> <input type="button" class="delete" value="x" />
                 </div>
                 <div class="well">
                     <h1 contenteditable class="contents">Add Some Text Here</h1>
-                    <div class="timestamp"> Last Modified: </div>
+                    <div class="timestamp"> </div>
+                    
+                    <input type="hidden" name="id" value="">
+
                 </div>
             </div>
         </div>
+        
+        <div class="col-xs-12 col-md-3 full-card" id="blanktrash" hidden="hidden">
+            <div class="flip-card active-card">
+                <div class="card alert-success">
+                    <h6 contenteditable class="title">Untitled</h6> <input type="button" class="delete" value="☰" />
+                </div>
+                <div class="well">
+                    <h1 contenteditable class="contents">Add Some Text Here</h1>
+<!--                    <div class="timestamp"> Last Modified: </div>-->
+                    
+                    <input type="hidden" name="id" value="">
 
-        <a href="#" class="btn btn-default btn-lg btn-block" id="submit">Add New Note</a>
+                </div>
+            </div>
+        </div>
+        
+  <a href="#" class="btn btn-default btn-lg btn-block" id="submit">Add New Note</a>
         <div id="example-row" class="row">
 
         </div>
