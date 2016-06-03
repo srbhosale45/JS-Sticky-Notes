@@ -102,8 +102,8 @@ div.flip-out {
 .well {
         height: 300px;
      position: relative;
-
 }
+
 .delete {
         position: absolute;
     right: 0;
@@ -115,14 +115,26 @@ div.flip-out {
     width: 49px;
     top: 32px;
 }
+
 .timestamp {
     float: right;
     right: 5px;
     bottom: 0;
     position: absolute;
 }
+
 #title {
     color: white;
     padding-left: 15px;
     padding-right: 3px;
+}
+
+
+
+img {
+    margin-top: 60px;
+    max-height: 100px;
+    max-width: 211px;
+    vertical-align: middle;
+    position: relative;
 }

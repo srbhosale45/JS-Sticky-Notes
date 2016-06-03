@@ -12,14 +12,16 @@ var todoGlobal = {};
     // Add New Note
     submit_btn.onclick = function() {
         var cln = blankcard.cloneNode(true);
-        var timestamp = $('.timestamp', cln);
+//        var timestamp = $('.timestamp', cln);
         var d = new Date();
         var id = $('[name="id"]', cln);
         id[0].value = d.getTime();
-        var times = d.toDateString() + " " + d.toLocaleTimeString()
-        timestamp[0].innerText = times;
+//        var times = d.toDateString() + " " + d.toLocaleTimeString()
+//        timestamp[0].innerText = times;
         cln.removeAttribute("hidden");
-        todo.appendChild(cln);
+        // todo.appendChild(cln);
+        todo.insertBefore(cln, todo.childNodes[0]);
+        cln.querySelector(".title").focus();
         storestate();
     };
 
@@ -31,6 +33,8 @@ var todoGlobal = {};
         var current = document.getElementsByClassName('contents'),
             titles = document.getElementsByClassName('title'),
             id = document.getElementsByName('id'),
+//            timestamp = document.getElementsByClassName('timestamp'),
+
             json_data;
         var img = document.getElementsByClassName("todoImage");
         console.log(current);
@@ -62,10 +66,13 @@ var todoGlobal = {};
                 var contents = $('.contents', cln)[0];
                 var id = $('[name="id"]', cln)[0];
                 var img = $('.todoImage', cln)[0];
+                var timestamp = $('.timestamp', cln)[0];
+
                 var storedNote = notesArray[i];
                 title.innerHTML = storedNote.title;
                 contents.innerHTML = storedNote.content;
                 id.value = storedNote.id;
+                timestamp.value = storedNote.timestamp;
                 img.src = fetchImage(storedNote.img);
                 cln.removeAttribute("hidden");
                 todo.appendChild(cln);

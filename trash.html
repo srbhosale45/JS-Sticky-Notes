@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a237e">
+
+    <title>Sticky Notes</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="material/css/ripples.min.css" rel="stylesheet">
+    <link href="material/css/material-wfont.min.css" rel="stylesheet">
+
+    <link href="css/flipper.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+<h1 id="title"> Sticky Notes </h1>
+            
+            <input type="hidden" id="current_page" value="home">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand" href="javascript:void(0)" onclick="return toggle_trash(false);">Sticky Notes&nbsp;&nbsp;&nbsp;</a>
+            <a class="navbar-brand withripple" href="javascript:void(0)" onclick="toggle_trash(true);">&nbsp;&nbsp;&nbsp;Trash<div class="ripple-wrapper"></div></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-xs-12 col-md-3 full-card" id="blankcard" hidden="hidden">
+            <div class="flip-card active-card">
+                <div class="card alert-success">
+                    <h6 contenteditable class="title">Untitled</h6> <input type="button" class="delete" value="x" />
+                </div>
+                <div class="well">
+                    <h1 contenteditable class="contents">Add Some Text Here</h1>
+                    <div class="timestamp"> </div>
+                    
+                    <input type="hidden" name="id" value="">
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-3 full-card" id="blanktrash" hidden="hidden">
+            <div class="flip-card active-card">
+                <div class="card alert-success">
+                    <h6 contenteditable class="title">Untitled</h6> <input type="button" class="delete" value="☰" />
+                </div>
+                <div class="well">
+                    <h1 contenteditable class="contents">Add Some Text Here</h1>
+<!--                    <div class="timestamp"> Last Modified: </div>-->
+                    
+                    <input type="hidden" name="id" value="">
+
+                </div>
+            </div>
+        </div>
+        
+  <a href="#" class="btn btn-default btn-lg btn-block" id="submit">Add New Note</a>
+        <div id="example-row" class="row">
+
+        </div>
+    </div>
+
+    <!--    JAVASCRIPT DEPENENCIES      -->
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="material/js/ripples.min.js"></script>
+    <script src="material/js/material.min.js"></script>
+    <script src="js/script.js">
+    </script>
+
+</body>
+</html>
