@@ -1,4 +1,4 @@
-# Sticky Notes (Javascript)
+# Sticky Notes (Javascript and Angular JS)
 A simple application to store and retrive notes which are stored locally on your computer. Available in both Javascript and Angular JS version.
   - Click on "Add New Note" Button
   - Set your title and Contents
